@@ -1,0 +1,31 @@
+
+> promptrank-tracker@1.0.0 dev
+> next dev --hostname 127.0.0.1 --port 3000
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://127.0.0.1:3000
+- Network:       http://127.0.0.1:3000
+✓ Ready in 679ms
+
+○ Compiling / ...
+ GET / 200 in 4.1s (next.js: 3.8s, application-code: 300ms)
+ GET / 200 in 315ms (next.js: 12ms, application-code: 303ms)
+ GET /register 200 in 1468ms (next.js: 1406ms, application-code: 62ms)
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].user.create()` invocation in
+C:\Users\nunez\Documents\SEO Tools\.next\dev\server\chunks\ssr\[root-of-the-server]__0e9g100._.js:188:136
+
+  185     password: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().min(8)
+  186 }).parse(Object.fromEntries(formData));
+  187 const passwordHash = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$bcryptjs$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].hash(data.password, 10);
+→ 188 await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].user.create(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:7
+   | 
+ 6 |   provider = "postgresql"
+ 7 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+ POST /register 500 in 736ms (next.js: 6ms, application-code: 730ms)
+  └─ ƒ registerUser({}) in 123ms lib/actions.ts

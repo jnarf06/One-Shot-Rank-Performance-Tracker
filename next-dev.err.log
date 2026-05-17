@@ -1,0 +1,30 @@
+⨯ Error [PrismaClientInitializationError]: 
+Invalid `{imported module ./lib/prisma.ts}["prisma"].user.create()` invocation in
+C:\Users\nunez\Documents\SEO Tools\.next\dev\server\chunks\ssr\[root-of-the-server]__0e9g100._.js:188:136
+
+  185     password: {imported module ./nodemodules/zod/v3/external.js}["z"].string().min(8)
+  186 }).parse(Object.fromEntries(formData));
+  187 const passwordHash = await {imported module ./nodemodules/bcryptjs/index.js}["default"].hash(data.password, 10);
+→ 188 await {imported module ./lib/prisma.ts}["prisma"].user.create(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:7
+   | 
+ 6 |   provider = "postgresql"
+ 7 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at <unknown> (lib\actions.ts:23:21)
+    at <unknown> (-->  schema.prisma:7)
+    at async registerUser (lib\actions.ts:23:3)
+  21 |     .parse(Object.fromEntries(formData));
+  22 |   const passwordHash = await bcrypt.hash(data.password, 10);
+> 23 |   await prisma.user.create({
+     |                     ^
+  24 |     data: { name: data.name, email: data.email.toLowerCase(), passwordHash }
+  25 |   });
+  26 |   redirect("/login?registered=1"); {
+  clientVersion: '5.22.0',
+  errorCode: undefined,
+  digest: '2953276523'
+}
