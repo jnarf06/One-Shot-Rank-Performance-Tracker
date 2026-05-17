@@ -1,0 +1,17 @@
+{
+  "/(auth)/login/page": "/login",
+  "/(auth)/register/page": "/register",
+  "/(dashboard)/dashboard/page": "/dashboard",
+  "/(dashboard)/keywords/page": "/keywords",
+  "/(dashboard)/projects/[id]/page": "/projects/[id]",
+  "/(dashboard)/projects/page": "/projects",
+  "/(dashboard)/prompts/page": "/prompts",
+  "/(dashboard)/reports/page": "/reports",
+  "/(dashboard)/settings/page": "/settings",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
+  "/api/export/csv/route": "/api/export/csv",
+  "/api/export/pdf/route": "/api/export/pdf",
+  "/page": "/"
+}
